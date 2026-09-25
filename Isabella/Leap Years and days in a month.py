@@ -1,13 +1,21 @@
 year = int(input("Enter a year: "))
 
-fourRemainder = year // 4
-oneHundredRemainder = year // 100
-fourHundredRemainder = year // 400
 
-if (fourRemainder != 0 and oneHundredRemainder != 0) or fourHundredRemainder != 0:
-    print(year "is not a Leap Year")
 
-elif
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0 and year % 100 != 0):
+    print(year, "is a Leap Year.")
 
-endif 
+else:
+    print(year, "is not a Leap Year.")
 
+month = int(input("Enter a month number(1-12): "))
+
+if month < 1 and month > 12:
+    print("Error")
+
+elif month == 1 or month == 3 or month == 5 or month == 7 or month == 8 or month == 10 or month == 12:
+    print(f"Month {month} of {year} has 31 days.")
+
+elif month == 4 or month == 6 or month == 9 or month == 11:
+    print(f"Month {month} of {year} has 30 days.")
+    
